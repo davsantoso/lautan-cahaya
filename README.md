@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✦ Lautan Cahaya Elektrikal
 
-## Getting Started
+Lautan Cahaya adalah toko dan penyedia kebutuhan instalasi listrik terlengkap yang melayani pembelian ritel maupun pengadaan proyek skala besar. Website profil perusahaan ini dirancang khusus untuk merepresentasikan profesionalisme dan kelengkapan produk Lautan Cahaya, dengan antarmuka yang modern, dinamis, dan responsif.
 
-First, run the development server:
+## 🚀 Teknologi yang Digunakan
 
+Proyek ini dibangun menggunakan *stack* modern:
+
+- **Framework:** [Next.js](https://nextjs.org/) (Menggunakan fitur App Router yang lebih cepat)
+- **Bahasa Pemrograman:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) untuk desain yang fleksibel dan modular.
+- **Library Animasi:** [Framer Motion](https://www.framer.com/motion/) untuk menghadirkan animasi berbasis skrol (*scroll animations*) dan transisi yang *smooth*.
+- **Ikon:** [Lucide React](https://lucide.dev/) untuk visual antarmuka yang bersih dan konsisten.
+
+## ✨ Fitur Utama & Struktur Halaman
+
+Website ini terdiri dari komponen modular yang diposisikan sedemikian rupa untuk membentuk profil perusahaan utuh:
+
+- `Beranda` (`/`): Menyatukan seluruh informasi utama toko seperti *Hero Banner*, Pengantar Singkat, Layanan Utama, Kelebihan (*Why Choose Us*), Galeri Produk, dan Kontak.
+- `Tentang Kami` (`/tentang`): Menceritakan perjalanan dan profil mendalam Lautan Cahaya.
+- `Layanan` (`/layanan`): Rincian lengkap mengenai konsultasi proyek dan instalasi listrik.
+- `Katalog Produk` (`/produk`): Menampilkan kategori peralatan elektrikal secara elegan menggunakan gaya *Gallery Grid*.
+- `Lokasi & Kontak` (`/lokasi`): Menyajikan integrasi interaktif dengan peta area toko beserta formulir pertanyaan.
+
+## 🛠️ Instalasi & Menjalankan di Lokal
+
+Pastikan Anda memiliki [Node.js](https://nodejs.org/) yang telah terpasang pada komputer Anda.
+
+1. Beralih ke direktori proyek lokal di terminal:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd lautan-cahaya
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instal seluruh *dependencies* yang dibutuhkan:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Jalankan aplikasi dalam mode pengembangan (*development*):
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Buka peramban Anda dan kunjungi `http://localhost:3000` untuk melihat hasilnya secara langsung.
 
-## Learn More
+## 📦 Build untuk Produksi (Deployment)
 
-To learn more about Next.js, take a look at the following resources:
+Untuk menyiapkan proyek ini agar ringan dan siap di-hosting ke layanan publik (seperti Vercel, Netlify, atau layanan server lainnya), jalankan tahap *build* berikut:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
+Proses ini akan mengkompilasi kode dan menghasilkan struktur *Static Site Generation (SSG)* di mana mungkin, mempercepat waktu muat halaman secara drastis.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Setelah proses *build* (*Compiled successfully*) selesai, Anda bisa mensimulasikan server produksi dengan:
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## 🎨 Konfigurasi Tema (Theme Customization)
+Warna tema aplikasi ini berpusat pada nuansa Kelistrikan (*Electric Blue* dan *Amber*). Pengaturan tema ini dapat diedit langsung melalui variabel CSS global di dalam `app/globals.css`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `--primary`: Warna dasar dominan, cocok untuk teks cetak tebal dan *footer* (Default: `Deep Blue`).
+- `--secondary`: Aksen *call-to-action* untuk memandu mata audiens (Default: `Warning Amber/Yellow`).
